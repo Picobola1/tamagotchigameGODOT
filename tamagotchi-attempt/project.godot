@@ -11,8 +11,17 @@ config_version=5
 [application]
 
 config/name="TamagotchiAttempt"
+run/main_scene="uid://dlodlogjmqcm7"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=128
+window/size/viewport_height=128
+window/size/resizable=false
+window/size/minimize_disabled=true
+window/size/maximize_disabled=true
 
 [editor_plugins]
 
@@ -24,4 +33,5 @@ enabled=PackedStringArray("res://addons/godot_super-wakatime/plugin.cfg")
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d3do5u26har84"
-path="res://.godot/imported/PACK - Lil Dino Free.png-2ad9fff2167eae04177a4f0fa315f14c.ctex"
+uid="uid://kk1tlmcv77yj"
+path="res://.godot/imported/76_pudding_dish.png-aa0c59de66b4491f2d3f254c57ea3164.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://PACK - Lil Dino Free copy/PACK - Lil Dino Free.png"
-dest_files=["res://.godot/imported/PACK - Lil Dino Free.png-2ad9fff2167eae04177a4f0fa315f14c.ctex"]
+source_file="res://assets/Ghostpixxells_pixelfood/76_pudding_dish.png"
+dest_files=["res://.godot/imported/76_pudding_dish.png-aa0c59de66b4491f2d3f254c57ea3164.ctex"]
 
 [params]
 

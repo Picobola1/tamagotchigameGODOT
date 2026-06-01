@@ -1,3 +1,53 @@
 [gd_scene format=3 uid="uid://dlodlogjmqcm7"]
 
+[ext_resource type="Texture2D" uid="uid://d3do5u26har84" path="res://assets/PACK - Lil Dino Free copy/PACK - Lil Dino Free.png" id="1_4flbx"]
+[ext_resource type="Script" uid="uid://dsf6gak7gan7g" path="res://main.gd" id="2_onrkg"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_onrkg"]
+atlas = ExtResource("1_4flbx")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i3pqv"]
+atlas = ExtResource("1_4flbx")
+region = Rect2(32, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hqtel"]
+atlas = ExtResource("1_4flbx")
+region = Rect2(64, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sweqy"]
+atlas = ExtResource("1_4flbx")
+region = Rect2(96, 64, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2hs0m"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_onrkg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i3pqv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hqtel")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i3pqv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sweqy")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
 [node name="Player" type="AnimatedSprite2D" unique_id=294785123]
+sprite_frames = SubResource("SpriteFrames_2hs0m")
+autoplay = "default"
+frame_progress = 0.4662167
+script = ExtResource("2_onrkg")
+metadata/_edit_vertical_guides_ = [16.0]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1463873552]
+zoom = Vector2(4, 4)
