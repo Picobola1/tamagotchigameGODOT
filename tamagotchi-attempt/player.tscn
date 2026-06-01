@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://d3do5u26har84" path="res://assets/PACK - Lil Dino Free copy/PACK - Lil Dino Free.png" id="1_4flbx"]
 [ext_resource type="Script" uid="uid://dsf6gak7gan7g" path="res://main.gd" id="2_onrkg"]
+[ext_resource type="PackedScene" uid="uid://bifapry2fxpxo" path="res://scenes/food.tscn" id="3_i3pqv"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_onrkg"]
 atlas = ExtResource("1_4flbx")
@@ -48,6 +49,9 @@ autoplay = "default"
 frame_progress = 0.4662167
 script = ExtResource("2_onrkg")
 metadata/_edit_vertical_guides_ = [16.0]
+
+[node name="Food" parent="." unique_id=990347322 instance=ExtResource("3_i3pqv")]
+position = Vector2(47, 40)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1463873552]
 zoom = Vector2(4, 4)

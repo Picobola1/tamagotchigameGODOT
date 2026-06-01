@@ -17,5 +17,14 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_xven1"]
+radius = 15.0
+
 [node name="Food" type="AnimatedSprite2D" unique_id=990347322]
 sprite_frames = SubResource("SpriteFrames_370ap")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1413166637]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1483704691]
+position = Vector2(0, 1)
+shape = SubResource("CircleShape2D_xven1")
