@@ -4,15 +4,14 @@ extends Node2D
 var score : int = Main.SnakeScore
 var game_start = false
 
-var cells : int = 20
-var cellSize : int = 50
 
 #snake vars
 var old_data : Array
 var snake_data : Array
 var snake : Array
-
-var start_pos = Vector2(9,9)
+var cells : int = 20
+var cellSize : int = 50
+var start_pos = Vector2(1, 1)
 var up = Vector2(0, -1)
 var down = Vector2(0,1)
 var left = Vector2(-1,0)
@@ -32,7 +31,7 @@ func genarate_snake():
 	old_data.clear()
 	snake_data.clear()
 	snake.clear()
-	for i in range(3):
+	for i in range(1):
 		add_segment(start_pos + Vector2(0,i))
 func add_segment(pos):
 	print("making snake at ", pos)
