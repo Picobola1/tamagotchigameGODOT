@@ -37,7 +37,7 @@ func add_segment(pos):
 	print("making snake at ", pos)
 	snake_data.append(pos)
 	var SnakeSegment = snake_scene.instantiate()
-	SnakeSegment.position = pos * cellSize
+	SnakeSegment.position = (pos * cellSize) + Vector2(0,cellSize)
 	add_child(SnakeSegment)
 	snake.append(SnakeSegment)
 # Called every frame. 'delta' is the elapsed time since the previous frame.
