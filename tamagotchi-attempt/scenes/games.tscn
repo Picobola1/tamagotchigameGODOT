@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://dx7vvtdptm137"]
+
+[ext_resource type="Script" uid="uid://gwsmiqdcgco7" path="res://scenes/games.gd" id="1_giet5"]
+[ext_resource type="Texture2D" uid="uid://b4mvympp2rg2j" path="res://assets/arcadeCabs2.png" id="1_umruc"]
+[ext_resource type="FontFile" uid="uid://rdn2taoqj8kf" path="res://assets/pixel_operator/PixelOperatorMonoHB8.ttf" id="2_gkbpp"]
+
+[sub_resource type="Theme" id="Theme_giet5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_va33t"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mt6op"]
+
+[node name="Games" type="Node2D" unique_id=498148058]
+script = ExtResource("1_giet5")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1752732487]
+texture = ExtResource("1_umruc")
+region_enabled = true
+region_rect = Rect2(207.66148, 0.21580124, 58.98079, 112.15114)
+
+[node name="Button" type="Button" parent="Sprite2D" unique_id=392099347]
+offset_left = -30.0
+offset_top = -57.0
+offset_right = 28.0
+offset_bottom = 56.0
+theme = SubResource("Theme_giet5")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_va33t")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_mt6op")
+
+[node name="Camera2D" type="Camera2D" parent="Sprite2D" unique_id=341468868]
+zoom = Vector2(2, 2)
+
+[node name="Label" type="Label" parent="." unique_id=2096520567]
+offset_left = -40.0
+offset_top = -28.0
+offset_right = 40.0
+offset_bottom = -20.0
+theme_override_fonts/font = ExtResource("2_gkbpp")
+theme_override_font_sizes/font_size = 8
+text = "Play Games"
+
+[connection signal="pressed" from="Sprite2D/Button" to="." method="_on_button_pressed"]

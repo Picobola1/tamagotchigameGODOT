@@ -35,6 +35,6 @@ offset_top = 10.0
 offset_right = 234.0
 offset_bottom = 26.0
 theme = SubResource("Theme_qlesx")
-max_value = 15.0
+max_value = 30.0
 editable = false
 scrollable = false

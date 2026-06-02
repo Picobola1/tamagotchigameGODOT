@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://dlodlogjmqcm7"]
 
+[ext_resource type="Script" uid="uid://dv38xphqkao7o" path="res://scenes/player.gd" id="1_dqkch"]
 [ext_resource type="Texture2D" uid="uid://d3do5u26har84" path="res://assets/PACK - Lil Dino Free copy/PACK - Lil Dino Free.png" id="1_qhqgy"]
 [ext_resource type="Theme" uid="uid://csekptayt5c4e" path="res://Text.tres" id="3_qlg0r"]
 
@@ -43,6 +44,7 @@ animations = [{
 }]
 
 [node name="player" type="Node2D" unique_id=957252270]
+script = ExtResource("1_dqkch")
 
 [node name="Player" type="AnimatedSprite2D" parent="." unique_id=294785123]
 scale = Vector2(2, 2)
@@ -54,7 +56,8 @@ metadata/_edit_vertical_guides_ = [16.0]
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=1463873552]
 zoom = Vector2(4, 4)
 
-[node name="Label" type="Label" parent="." unique_id=1951887898]
+[node name="Hungry" type="Label" parent="." unique_id=1951887898]
+visible = false
 offset_left = -31.0
 offset_top = 18.0
 offset_right = 32.0
@@ -62,3 +65,23 @@ offset_bottom = 31.0
 theme = ExtResource("3_qlg0r")
 theme_override_font_sizes/font_size = 9
 text = "FEED ME"
+
+[node name="Play" type="Label" parent="." unique_id=1581986474]
+visible = false
+offset_left = -32.0
+offset_top = 18.0
+offset_right = 32.0
+offset_bottom = 31.0
+theme = ExtResource("3_qlg0r")
+theme_override_font_sizes/font_size = 8
+text = "Im Bored"
+
+[node name="Sick" type="Label" parent="." unique_id=1166768300]
+visible = false
+offset_left = -31.0
+offset_top = 18.0
+offset_right = 32.0
+offset_bottom = 31.0
+theme = ExtResource("3_qlg0r")
+theme_override_font_sizes/font_size = 9
+text = "I Sick"

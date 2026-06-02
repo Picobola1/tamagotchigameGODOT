@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://d4mrqcygsd61p"]
+
+[node name="gameOptions" type="Node2D" unique_id=1014412407]
+
+[node name="Button" type="Button" parent="." unique_id=427733097]
+offset_right = 62.0
+offset_bottom = 20.0
+text = "Snake"
