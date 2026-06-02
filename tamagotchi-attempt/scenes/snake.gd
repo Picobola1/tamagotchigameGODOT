@@ -11,7 +11,7 @@ var snake_data : Array
 var snake : Array
 var cells : int = 20
 var cellSize : int = 50
-var start_pos = Vector2(0, 0)
+var start_pos = Vector2(0,0)
 var up = Vector2(0, -1)
 var down = Vector2(0,1)
 var left = Vector2(-1,0)
@@ -37,8 +37,9 @@ func add_segment(pos):
 	print("making snake at ", pos)
 	snake_data.append(pos)
 	var SnakeSegment = snake_scene.instantiate()
-	SnakeSegment.position = (pos * cellSize)
 	add_child(SnakeSegment)
+	SnakeSegment.position = (pos * cellSize)
+	
 	snake.append(SnakeSegment)
 	print("START POS IS: ", start_pos)
 	print("grid pos: ", pos)

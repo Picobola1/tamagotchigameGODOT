@@ -1,18 +1,11 @@
 [gd_scene format=3 uid="uid://qnvghrmj46xm"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_83yuc"]
-bg_color = Color(0.3034116, 0.70820665, 0, 1)
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
-corner_detail = 10
+[sub_resource type="Theme" id="Theme_83yuc"]
 
-[sub_resource type="Theme" id="Theme_1sg3p"]
-Panel/styles/panel = SubResource("StyleBoxFlat_83yuc")
+[node name="Node2D" type="Node2D" unique_id=1110988518]
 
-[node name="SnakeSegment" type="Panel" unique_id=95640342]
-z_index = 2
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1430573243]
 offset_right = 50.0
 offset_bottom = 50.0
-theme = SubResource("Theme_1sg3p")
+theme = SubResource("Theme_83yuc")
+color = Color(0.6, 1, 0.12941177, 1)
