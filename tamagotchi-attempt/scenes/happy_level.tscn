@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://dq8yiseldg6hw"]
+
+[ext_resource type="Texture2D" uid="uid://uqx4rrf53a23" path="res://pixil-frame-0.png" id="1_m1hd3"]
+
+[sub_resource type="Gradient" id="Gradient_s0up1"]
+offsets = PackedFloat32Array(0, 0.1746988, 0.21084337, 0.40361446, 0.42771083, 0.686747, 0.69578314, 0.96686745)
+colors = PackedColorArray(1, 0.12156863, 0.12941177, 1, 0.999798, 0.120189406, 0.12806326, 1, 0.9999966, 0.43303072, 0.11670724, 1, 1, 0.43137255, 0.11764706, 1, 1, 1, 0.3019608, 1, 1, 1, 0.3019608, 1, 0.30588236, 0.8745098, 0.17254902, 1, 0.3077503, 0.8750027, 0.17292678, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_m1hd3"]
+gradient = SubResource("Gradient_s0up1")
+width = 31
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_oq24o"]
+
+[sub_resource type="Theme" id="Theme_qlesx"]
+HSlider/icons/grabber = ExtResource("1_m1hd3")
+HSlider/icons/grabber_disabled = ExtResource("1_m1hd3")
+HSlider/icons/grabber_highlight = ExtResource("1_m1hd3")
+HSlider/styles/slider = SubResource("StyleBoxEmpty_oq24o")
+
+[node name="HappyLevel" type="Node2D" unique_id=50011766]
+
+[node name="Label" type="Label" parent="." unique_id=1806802597]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Happiness Level: 10"
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=950755636]
+offset_top = 27.0
+offset_right = 249.0
+offset_bottom = 67.0
+texture = SubResource("GradientTexture1D_m1hd3")
+
+[node name="HSlider" type="HSlider" parent="." unique_id=1134642478]
+offset_left = -1.0
+offset_top = 55.0
+offset_right = 250.0
+offset_bottom = 71.0
+theme = SubResource("Theme_qlesx")
+max_value = 15.0
+step = 0.0
+value = 15.0
+scrollable = false
+ticks_on_borders = true
