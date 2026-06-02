@@ -13,3 +13,4 @@ func _process(delta: float) -> void:
 
 func _on_button_pressed() -> void:
 	Main.Happy += 2
+	Main.makeWindow("snake","res://scenes/snake.tscn", Vector2(500,525), Vector2(500,525) )
