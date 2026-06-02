@@ -23,7 +23,7 @@ HSlider/styles/slider = SubResource("StyleBoxEmpty_oq24o")
 [node name="Label" type="Label" parent="." unique_id=1806802597]
 offset_right = 40.0
 offset_bottom = 23.0
-text = "Happiness Level: 10"
+text = "Happiness Level: 15"
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=950755636]
 offset_top = 27.0
