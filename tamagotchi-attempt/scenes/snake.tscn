@@ -12,3 +12,8 @@ snake_scene = ExtResource("2_auphx")
 [node name="Backround" type="Sprite2D" parent="." unique_id=505208634]
 position = Vector2(500, 500)
 texture = ExtResource("2_yc36x")
+
+[node name="MoveTimer" type="Timer" parent="." unique_id=1829257336]
+wait_time = 0.1
+
+[connection signal="timeout" from="MoveTimer" to="." method="_on_move_timer_timeout"]
