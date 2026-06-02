@@ -2,6 +2,7 @@ extends AnimatedSprite2D
 
 var NewWindow = Window.new()
 var Happy = 5
+var SnakeScore = 0
 
 
 

@@ -1,6 +1,7 @@
 extends Node2D
 
-var score : int = 0
+@export var snake_scene : PackedScene
+var score : int = Main.SnakeScore
 var game_start = false
 
 var cells : int = 20
