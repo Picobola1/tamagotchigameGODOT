@@ -5,8 +5,8 @@ var Happy = 5
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	makeWindow("Food", "res://scenes/food.tscn", Vector2i(175,250), Vector2i(10,10))
-	makeWindow("Happiness", "res://scenes/happy_level.tscn", Vector2i(450,50), Vector2i(1300,620))
+	makeWindow("Food", "res://scenes/food.tscn", Vector2i(175,250), Vector2i(1575,736))
+	makeWindow("Happiness", "res://scenes/happy_level.tscn", Vector2i(465,50), Vector2i(1300,620))
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
