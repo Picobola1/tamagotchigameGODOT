@@ -1,33 +1,49 @@
 [gd_scene format=3 uid="uid://bifapry2fxpxo"]
 
-[ext_resource type="Texture2D" uid="uid://qkn3u5rwtfvg" path="res://assets/Ghostpixxells_pixelfood/82_pizza_dish.png" id="1_xven1"]
+[ext_resource type="Texture2D" uid="uid://c3neya3y65e1u" path="res://assets/Ghostpixxells_pixelfood/94_spaghetti.png" id="1_xven1"]
+[ext_resource type="Script" uid="uid://l7li3dgh88u" path="res://scenes/food.gd" id="2_af40f"]
+[ext_resource type="FontFile" uid="uid://rdn2taoqj8kf" path="res://assets/pixel_operator/PixelOperatorMonoHB8.ttf" id="3_370ap"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_af40f"]
-atlas = ExtResource("1_xven1")
-region = Rect2(0, 0, 32, 32)
+[sub_resource type="Theme" id="Theme_xven1"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_370ap"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_af40f")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xven1"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_xven1"]
-radius = 15.0
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_af40f"]
 
-[node name="Food" type="AnimatedSprite2D" unique_id=990347322]
-sprite_frames = SubResource("SpriteFrames_370ap")
-
-[node name="Area2D" type="Area2D" parent="." unique_id=1413166637]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1483704691]
-position = Vector2(0, 1)
-shape = SubResource("CircleShape2D_xven1")
+[node name="Food" type="Node2D" unique_id=209326136]
+script = ExtResource("2_af40f")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=392442371]
-zoom = Vector2(3, 3)
+zoom = Vector2(4, 4)
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=30940690]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+texture = ExtResource("1_xven1")
+
+[node name="Button" type="Button" parent="TextureRect" unique_id=1871560363]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 6.0
+offset_right = 38.0
+offset_bottom = 38.0
+theme = SubResource("Theme_xven1")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_xven1")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_af40f")
+
+[node name="Label" type="Label" parent="." unique_id=406946268]
+offset_left = -20.0
+offset_top = -24.0
+offset_right = 21.0
+offset_bottom = 29.0
+theme_override_fonts/font = ExtResource("3_370ap")
+theme_override_font_sizes/font_size = 8
+text = "Click
+
+
+
+Food"
+
+[connection signal="pressed" from="TextureRect/Button" to="." method="_on_button_pressed"]

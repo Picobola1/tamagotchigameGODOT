@@ -1,23 +1,22 @@
 [gd_scene format=3 uid="uid://dlodlogjmqcm7"]
 
-[ext_resource type="Texture2D" uid="uid://d3do5u26har84" path="res://assets/PACK - Lil Dino Free copy/PACK - Lil Dino Free.png" id="1_4flbx"]
-[ext_resource type="Script" uid="uid://dsf6gak7gan7g" path="res://main.gd" id="2_onrkg"]
-[ext_resource type="Theme" uid="uid://csekptayt5c4e" path="res://Text.tres" id="3_i3pqv"]
+[ext_resource type="Texture2D" uid="uid://d3do5u26har84" path="res://assets/PACK - Lil Dino Free copy/PACK - Lil Dino Free.png" id="1_qhqgy"]
+[ext_resource type="Theme" uid="uid://csekptayt5c4e" path="res://Text.tres" id="3_qlg0r"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_onrkg"]
-atlas = ExtResource("1_4flbx")
+atlas = ExtResource("1_qhqgy")
 region = Rect2(0, 64, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_i3pqv"]
-atlas = ExtResource("1_4flbx")
+atlas = ExtResource("1_qhqgy")
 region = Rect2(32, 64, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hqtel"]
-atlas = ExtResource("1_4flbx")
+atlas = ExtResource("1_qhqgy")
 region = Rect2(64, 64, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_sweqy"]
-atlas = ExtResource("1_4flbx")
+atlas = ExtResource("1_qhqgy")
 region = Rect2(96, 64, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_2hs0m"]
@@ -50,7 +49,6 @@ scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_2hs0m")
 autoplay = "default"
 frame_progress = 0.4662167
-script = ExtResource("2_onrkg")
 metadata/_edit_vertical_guides_ = [16.0]
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=1463873552]
@@ -61,6 +59,6 @@ offset_left = -31.0
 offset_top = 18.0
 offset_right = 32.0
 offset_bottom = 31.0
-theme = ExtResource("3_i3pqv")
+theme = ExtResource("3_qlg0r")
 theme_override_font_sizes/font_size = 9
 text = "FEED ME"
