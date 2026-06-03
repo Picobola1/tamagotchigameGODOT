@@ -1,0 +1,3 @@
+This was my attempt of makeing some sort of tamagotchi, i didnt turn out very well just like my last projects this was made to cover up my sleepover debt. The way it works really is that there are 4 diffrent windows that you can have. THe first window is the actual dino that you are takeing care of and it says what is feeling like its bored and its hungry. If your tamagatchi happiness level goes below the red zone it dies :( by feeding it food wich refreshes every 5 seconds and playing snake game you can keep it up! Have fun!
+
+<img width="433" height="291" alt="image" src="https://github.com/user-attachments/assets/0f910ef6-3fde-472d-8310-b0602ef8bc74" />
