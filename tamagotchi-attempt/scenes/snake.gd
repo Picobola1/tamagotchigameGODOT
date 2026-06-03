@@ -115,7 +115,9 @@ func move_food():
 	regen_food = true
 
 func end_game():
-	pass
+	await get_tree().create_timer(5.0).timeout
+	get_window().queue_free()
+	
 func update_window_title():
 	var window = get_window()
 	window.title = "score: " + str(Main.SnakeScore)
