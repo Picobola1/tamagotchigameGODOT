@@ -4,6 +4,8 @@ extends Node2D
 var score : int = Main.SnakeScore
 var game_start = false
 
+var food_pos : Vector2
+var regen_food : bool = true
 
 #snake vars
 var old_data : Array
@@ -21,6 +23,7 @@ var can_move : bool
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	new_game()
+	move_food()
 
 func new_game():
 	Main.SnakeScore = 0
@@ -77,16 +80,42 @@ func start_game():
 			
 
 func _on_move_timer_timeout() -> void:
-	
 	can_move = true
-
 	old_data = [] + snake_data
-
 	snake_data[0] += move_direction
-
 	for i in range(len(snake_data)):
 		if i > 0:
 			snake_data[i] = old_data[i - 1]
-
 		snake[i].position = (snake_data[i] * cellSize) + Vector2(0, cellSize)
-	 
+	check_out_of_bound()
+	check_self_eaten()
+	check_food_eaten()
+
+func check_out_of_bound():
+	if snake_data[0].x < 0 or snake_data[0].x > cells - 1 or snake_data[0].y > 1 or snake_data[0].y > cells - 1:
+		end_game()
+func check_self_eaten():
+	for i in range(1, len(snake_data)):
+		if snake_data[0] == snake_data[i]:
+			end_game()
+func check_food_eaten():
+	if snake_data[0] == food_pos:
+		Main.SnakeScore += 1
+		add_segment(old_data[-1])
+		move_food()
+		update_window_title()
+func move_food():
+	while regen_food:
+		regen_food = false
+		food_pos = Vector2(randi_range(0,cells-1),randi_range(0, cells-1)) 
+		for i in snake_data:
+			if food_pos == i:
+				regen_food = true
+	$Food.position = (food_pos * cellSize) + Vector2(0, cellSize)
+	regen_food = true
+
+func end_game():
+	pass
+func update_window_title():
+	var window = get_window()
+	window.title = "score: " + str(Main.SnakeScore)

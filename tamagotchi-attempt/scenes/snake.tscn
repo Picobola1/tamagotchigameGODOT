@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://x2rs7sm2d0xr" path="res://scenes/snake.gd" id="1_a5f6l"]
 [ext_resource type="PackedScene" uid="uid://qnvghrmj46xm" path="res://scenes/snake_segment.tscn" id="2_auphx"]
 [ext_resource type="Texture2D" uid="uid://isekyhbht7su" path="res://assets/godot-snake-assets-main/assets/bg.png" id="2_yc36x"]
+[ext_resource type="Texture2D" uid="uid://dty5ot25qhwyy" path="res://assets/godot-snake-assets-main/assets/apple.png" id="4_l4b1q"]
 
 [node name="snake" type="Node2D" unique_id=1997723625]
 z_index = -2
@@ -15,5 +16,9 @@ texture = ExtResource("2_yc36x")
 
 [node name="MoveTimer" type="Timer" parent="." unique_id=1829257336]
 wait_time = 0.1
+
+[node name="Food" type="Sprite2D" parent="." unique_id=1904572373]
+texture = ExtResource("4_l4b1q")
+offset = Vector2(25, 25)
 
 [connection signal="timeout" from="MoveTimer" to="." method="_on_move_timer_timeout"]
